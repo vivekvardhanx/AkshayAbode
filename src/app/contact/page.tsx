@@ -5,7 +5,7 @@ import { MapEmbed } from "@/components/MapEmbed";
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Contact Us - Akshay Abode',
+  title: 'Contact Us - Akshay Boys Hostel',
   description: 'Get in touch with us for enquiries and location details.',
 };
 
@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <div className="space-y-8">
         <div className="text-center space-y-2">
-            <h1 className="text-3xl md:text-4xl font-bold font-headline">Get In Touch</h1>
+            <h1 className="text-3xl md:text-4xl font-bold">Get In Touch</h1>
             <p className="text-lg text-muted-foreground">We're here to help. Contact us with any questions or to schedule a visit.</p>
         </div>
 
@@ -22,7 +22,7 @@ export default function ContactPage() {
                 <Card className="shadow-lg transition-shadow hover:shadow-xl">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-3 text-2xl">
-                            <Phone className="h-6 w-6 text-accent" />
+                            <Phone className="h-6 w-6 text-primary" />
                             Contact Details
                         </CardTitle>
                         <CardDescription>Reach out to us via phone or WhatsApp.</CardDescription>
@@ -36,7 +36,7 @@ export default function ContactPage() {
                             <MessageCircle className="h-5 w-5 text-muted-foreground" />
                             <span>+91 12345 67890</span>
                         </div>
-                        <Button asChild className="w-full" size="lg">
+                        <Button asChild className="w-full bg-green-500 hover:bg-green-600 text-white" size="lg">
                             <Link href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
                                 <MessageCircle className="mr-2 h-5 w-5" /> Chat on WhatsApp
                             </Link>
@@ -48,7 +48,7 @@ export default function ContactPage() {
              <Card className="lg:col-span-3 shadow-lg transition-shadow hover:shadow-xl">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-3 text-2xl">
-                        <MapPin className="h-6 w-6 text-accent" />
+                        <MapPin className="h-6 w-6 text-primary" />
                         Our Location
                     </CardTitle>
                      <CardDescription>

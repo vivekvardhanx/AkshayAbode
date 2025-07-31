@@ -4,8 +4,8 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { Suspense } from 'react';
 
 export const metadata = {
-  title: 'Our Rooms - Akshay Abode',
-  description: 'Explore the variety of rooms we offer at Akshay Abode.',
+  title: 'Our Rooms - Akshay Boys Hostel',
+  description: 'Explore the variety of rooms we offer at Akshay Boys Hostel.',
 };
 
 async function RoomsList() {
@@ -44,7 +44,7 @@ export default function RoomsPage() {
     return (
         <div className="space-y-8">
             <div className="text-center space-y-2">
-                <h1 className="text-3xl md:text-4xl font-bold font-headline">Our Rooms</h1>
+                <h1 className="text-3xl md:text-4xl font-bold">Our Rooms</h1>
                 <p className="text-lg text-muted-foreground">Find the perfect space that suits your needs and budget.</p>
             </div>
             <Suspense fallback={<RoomsListSkeleton />}>

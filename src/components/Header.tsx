@@ -2,16 +2,16 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BedDouble, Menu } from "lucide-react";
+import { BedDouble, Menu, Home, Phone } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/rooms", label: "Rooms" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Home", icon: Home },
+  { href: "/rooms", label: "Rooms", icon: BedDouble },
+  { href: "/contact", label: "Contact", icon: Phone },
 ];
 
 export function Header() {
@@ -21,34 +21,42 @@ export function Header() {
   const NavLink = ({
     href,
     label,
+    icon: Icon,
     className,
   }: {
     href: string;
     label: string;
+    icon: React.ElementType;
     className?: string;
-  }) => (
-    <Link
-      href={href}
-      onClick={() => setIsMobileMenuOpen(false)}
-      className={cn(
-        "font-medium transition-colors hover:text-primary",
-        pathname === href ? "text-primary" : "text-foreground/60",
-        className
-      )}
-    >
-      {label}
-    </Link>
-  );
+  }) => {
+    const isActive = pathname === href;
+    return(
+      <Link
+        href={href}
+        onClick={() => setIsMobileMenuOpen(false)}
+        className={cn(
+          "flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+          isActive ? "bg-primary text-primary-foreground" : "text-foreground/70 hover:bg-muted/50 hover:text-foreground",
+          className
+        )}
+      >
+        <Icon className="h-5 w-5" />
+        <span>{label}</span>
+      </Link>
+    );
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-          <BedDouble className="h-6 w-6 text-accent" />
-          <span>Akshay Abode</span>
+          <div className="bg-primary/80 p-2 rounded-md">
+            <BedDouble className="h-6 w-6 text-white" />
+          </div>
+          <span>Akshay Boys Hostel</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="hidden md:flex items-center gap-2 text-sm">
           {navItems.map((item) => (
             <NavLink key={item.href} {...item} />
           ))}
@@ -63,17 +71,19 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <div className="flex flex-col gap-6 p-6">
+              <div className="flex flex-col gap-4 p-6">
                 <Link
                   href="/"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center gap-2 font-bold text-lg mb-4"
                 >
-                  <BedDouble className="h-6 w-6 text-accent" />
-                  <span>Akshay Abode</span>
+                  <div className="bg-primary/80 p-2 rounded-md">
+                    <BedDouble className="h-6 w-6 text-white" />
+                  </div>
+                  <span>Akshay Boys Hostel</span>
                 </Link>
                 {navItems.map((item) => (
-                  <NavLink key={item.href} {...item} className="text-lg" />
+                  <NavLink key={item.href} {...item} className="text-base" />
                 ))}
               </div>
             </SheetContent>

@@ -3,11 +3,18 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import { Manrope } from 'next/font/google'
 
 export const metadata: Metadata = {
-  title: "Akshay Abode",
-  description: "A modern, comfortable boys hostel.",
+  title: "Akshay Boys Hostel",
+  description: "Premium boys hostel with modern amenities and comfortable living spaces.",
 };
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-manrope',
+})
 
 export default function RootLayout({
   children,
@@ -15,20 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`${manrope.variable} h-full`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body className="font-body antialiased flex flex-col min-h-screen">
+      <body className="font-sans antialiased flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow container mx-auto px-4 py-8">
           {children}

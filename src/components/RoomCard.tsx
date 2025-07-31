@@ -33,13 +33,13 @@ export function RoomCard({ room }: RoomCardProps) {
       <div className="p-6 flex-grow flex flex-col">
         <CardContent className="p-0 flex-grow space-y-4">
             <div className="flex justify-between items-start gap-4">
-                <CardTitle className="text-2xl font-headline">{room.name}</CardTitle>
+                <CardTitle className="text-2xl">{room.name}</CardTitle>
                 <div className="text-lg font-semibold text-primary whitespace-nowrap">{room.price}</div>
             </div>
             <CardDescription>{room.description}</CardDescription>
         </CardContent>
         <CardFooter className="p-0 pt-6">
-            <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild className="w-full">
                 <Link href="/contact">Enquire Now</Link>
             </Button>
         </CardFooter>
