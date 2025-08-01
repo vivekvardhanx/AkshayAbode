@@ -1,14 +1,18 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Wifi, UtensilsCrossed, WashingMachine, Tv, Bath } from "lucide-react";
+import { ArrowRight, Wifi, UtensilsCrossed, WashingMachine, Tv, Bath, Zap, Droplets, Sparkles, Shield } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 
 const amenities = [
-  { icon: Wifi, text: "High-Speed Wi-Fi" },
+  { icon: Wifi, text: "Free WiFi" },
   { icon: UtensilsCrossed, text: "Mess Facility" },
   { icon: WashingMachine, text: "Laundry Service" },
   { icon: Bath, text: "Hot Water Facility" },
+  { icon: Zap, text: "Electricity" },
+  { icon: Droplets, text: "Water Supply" },
+  { icon: Sparkles, text: "Housekeeping" },
+  { icon: Shield, text: "Security" },
 ];
 
 
