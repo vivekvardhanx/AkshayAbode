@@ -46,5 +46,13 @@ export async function getRooms(): Promise<Room[]> {
       imageUrl: 'https://placehold.co/600x400.png',
       imageHint: 'single bedroom modern',
     },
+    {
+      id: '7',
+      name: 'Parent Room (Temporary)',
+      price: 'Contact for price',
+      description: 'Comfortable and private rooms available for parents visiting for a short duration. Please contact us for availability and pricing.',
+      imageUrl: 'https://placehold.co/600x400.png',
+      imageHint: 'guest bedroom hotel',
+    },
   ];
 }
