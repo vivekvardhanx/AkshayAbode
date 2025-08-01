@@ -30,14 +30,14 @@ export default function ContactPage() {
                     <CardContent className="space-y-6 text-lg">
                         <div className="flex items-center gap-4">
                             <Phone className="h-5 w-5 text-muted-foreground" />
-                            <span>+91 12345 67890</span>
+                            <span>+91 76718 11698</span>
                         </div>
                         <div className="flex items-center gap-4">
                             <MessageCircle className="h-5 w-5 text-muted-foreground" />
-                            <span>+91 12345 67890</span>
+                            <span>+91 76718 11698</span>
                         </div>
                         <Button asChild className="w-full bg-green-500 hover:bg-green-600 text-white" size="lg">
-                            <Link href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
+                            <Link href="https://wa.me/917671811698" target="_blank" rel="noopener noreferrer">
                                 <MessageCircle className="mr-2 h-5 w-5" /> Chat on WhatsApp
                             </Link>
                         </Button>
