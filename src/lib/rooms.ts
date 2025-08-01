@@ -50,7 +50,7 @@ export async function getRooms(): Promise<Room[]> {
       id: '7',
       name: 'Parent Room (Temporary)',
       price: 'Contact for price',
-      description: 'Comfortable and private rooms available for parents visiting for a short duration. Please contact us for availability and pricing.',
+      description: 'Available temporary accommodation for parents. Please contact us for availability and pricing.',
       imageUrl: 'https://placehold.co/600x400.png',
       imageHint: 'guest bedroom hotel',
     },
