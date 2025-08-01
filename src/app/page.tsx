@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Wifi, UtensilsCrossed, WashingMachine, Tv } from "lucide-react";
+import { ArrowRight, Wifi, UtensilsCrossed, WashingMachine, Tv, Bath } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 
@@ -8,7 +8,7 @@ const amenities = [
   { icon: Wifi, text: "High-Speed Wi-Fi" },
   { icon: UtensilsCrossed, text: "Mess Facility" },
   { icon: WashingMachine, text: "Laundry Service" },
-  { icon: Tv, text: "Common TV Room" },
+  { icon: Bath, text: "Hot Water Facility" },
 ];
 
 
