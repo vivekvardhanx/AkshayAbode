@@ -38,22 +38,6 @@ export async function getRooms(): Promise<Room[]> {
       imageUrl: 'https://placehold.co/600x400.png',
       imageHint: 'hostel dormitory',
     },
-     {
-      id: '4',
-      name: '2 Sharing (A/C)',
-      price: '₹10000/month',
-      description: 'Enjoy the comfort of air conditioning in this premium room for two. Perfect for staying cool during the summer.',
-      imageUrl: 'https://placehold.co/600x400.png',
-      imageHint: 'luxury twin room',
-    },
-    {
-      id: '5',
-      name: '3 Sharing (A/C)',
-      price: '₹8000/month',
-      description: 'Stay cool and comfortable with your friends. This A/C room is perfect for groups of three.',
-      imageUrl: 'https://placehold.co/600x400.png',
-      imageHint: 'triple room hostel',
-    },
     {
       id: '6',
       name: 'Single Room',
