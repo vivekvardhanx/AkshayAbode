@@ -27,7 +27,7 @@ export default function ContactPage() {
                         </CardTitle>
                         <CardDescription>Reach out to us via phone or WhatsApp.</CardDescription>
                     </CardHeader>
-                    <CardContent className="space-y-6 text-lg">
+                    <CardContent className="space-y-4 text-lg">
                         <div className="flex items-center gap-4">
                             <Phone className="h-5 w-5 text-muted-foreground" />
                             <span>+91 76718 11698</span>
@@ -36,11 +36,18 @@ export default function ContactPage() {
                             <MessageCircle className="h-5 w-5 text-muted-foreground" />
                             <span>+91 76718 11698</span>
                         </div>
-                        <Button asChild className="w-full bg-green-500 hover:bg-green-600 text-white" size="lg">
-                            <Link href="https://wa.me/917671811698" target="_blank" rel="noopener noreferrer">
-                                <MessageCircle className="mr-2 h-5 w-5" /> Chat on WhatsApp
-                            </Link>
-                        </Button>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                             <Button asChild className="w-full" size="lg">
+                                <Link href="tel:+917671811698">
+                                    <Phone className="mr-2 h-5 w-5" /> Call Now
+                                </Link>
+                            </Button>
+                            <Button asChild className="w-full bg-green-500 hover:bg-green-600 text-white" size="lg">
+                                <Link href="https://wa.me/917671811698" target="_blank" rel="noopener noreferrer">
+                                    <MessageCircle className="mr-2 h-5 w-5" /> WhatsApp
+                                </Link>
+                            </Button>
+                        </div>
                     </CardContent>
                 </Card>
             </div>
