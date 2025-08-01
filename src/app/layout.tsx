@@ -3,17 +3,18 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
-import { Manrope } from 'next/font/google'
+import { PT_Sans } from 'next/font/google'
 
 export const metadata: Metadata = {
   title: "Akshay Boys Hostel",
   description: "Premium boys hostel with modern amenities and comfortable living spaces.",
 };
 
-const manrope = Manrope({
+const ptSans = PT_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-manrope',
+  variable: '--font-pt-sans',
+  weight: ['400', '700']
 })
 
 export default function RootLayout({
@@ -22,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} h-full`}>
+    <html lang="en" className={`${ptSans.variable} h-full`}>
       <head>
       </head>
       <body className="font-sans antialiased flex flex-col min-h-screen">
