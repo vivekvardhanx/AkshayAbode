@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BedDouble, Menu, Home, Phone } from "lucide-react";
+import { BedDouble, Menu, Home, Phone, Building } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Home", icon: Home },
-  { href: "/rooms", label: "Rooms", icon: BedDouble },
+  { href: "/#rooms", label: "Rooms", icon: Building },
   { href: "/contact", label: "Contact", icon: Phone },
 ];
 
