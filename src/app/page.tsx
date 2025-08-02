@@ -34,15 +34,15 @@ const amenities = [
   { icon: Droplets, text: "Water Supply" },
   { icon: Sparkles, text: "Housekeeping" },
   { icon: Shield, text: "Security" },
-  { icon: BookUser, text: "Study Tables" },
-  { icon: MirrorIcon, text: "Mirror" },
+  { icon: BookUser, text: "Study Tables (Coming Soon)" },
+  { icon: MirrorIcon, text: "Mirror (Coming Soon)" },
 ];
 
 async function AllRooms() {
   const allRooms = await getRooms();
 
   return (
-    <section className="w-full py-16 bg-muted/50">
+    <section id="rooms" className="w-full py-16 bg-muted/50">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Rooms</h2>
           <p className="text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
@@ -83,9 +83,7 @@ export default function Home() {
         </div>
       </section>
       
-      <div id="rooms">
-        <AllRooms />
-      </div>
+      <AllRooms />
       
       <section className="w-full py-16">
         <div className="container mx-auto text-center">
