@@ -19,7 +19,7 @@ export async function getRooms(): Promise<Room[]> {
       name: '2 Sharing',
       price: '₹10000/month',
       description: 'A spacious and well-ventilated room for two, complete with individual beds, study tables, and wardrobes.',
-      imageUrl: 'https://placehold.co/600x400.png',
+      imageUrl: '/2-sharing-room.jpg',
       imageHint: 'modern bedroom twin',
     },
     {
