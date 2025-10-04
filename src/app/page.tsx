@@ -75,7 +75,7 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {amenities.map((amenity, index) => (
-              <Card key={index} className="bg-card shadow-lg hover:shadow-xl transition-shadow">
+              <Card key={index} className="bg-card shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
                   <div className="mx-auto bg-primary/20 text-primary rounded-full p-4 w-fit">
                     <amenity.icon className="h-8 w-8" />
