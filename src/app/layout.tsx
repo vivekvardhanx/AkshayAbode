@@ -13,8 +13,6 @@ export const metadata: Metadata = {
     title: 'Akshay Hostel 🏠',
     description: 'Comfortable Living for Students. Akshay Hostel provides a secure and friendly atmosphere for student life.',
     type: 'website',
-    // You should replace this with your actual domain when you deploy.
-    // I'll also use a placeholder for the image.
     url: 'https://yourdomain.com',
     images: [
       {
@@ -48,6 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} h-full`} suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
       </head>
       <body className="font-sans antialiased flex flex-col min-h-screen">
         <ThemeProvider
