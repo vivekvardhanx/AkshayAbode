@@ -44,11 +44,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} h-full`} suppressHydrationWarning>
+    <html lang="en" className={`${poppins.variable} h-full`}>
       <head>
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
       </head>
-      <body className="font-sans antialiased flex flex-col min-h-screen">
+      <body className="font-sans antialiased flex flex-col min-h-screen" suppressHydrationWarning>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
